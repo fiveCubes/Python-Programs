@@ -41,4 +41,34 @@ def minion_game(s):
 
 minion_game(s)
 
+# array manupulation
+
+def arrayManipulation(n, queries):
+    #print("running",n)
+    
+    master = [0]*(int(n)+2)
+    for q in queries:
+        start , end , value = q
+        master[start] = master[start] + value
+        master[end+1] = master[end+1] - value
+        #print(master)
+          #print('final',arr)
+    #return max(arr)
+    #sum=[]
+    # initial=0
+    max = x=0
+    for k in master:
+      x=x+k
+      if(max < x):
+        max=x
+    return max
+
+
+        
+    #   sum.append(initial+master[x])
+    #   initial=initial+master[x]
+    # return (max(sum))
+    
+print(arrayManipulation(n,queries))
+
   
