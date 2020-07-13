@@ -17,3 +17,28 @@ def is_leap(year):
     return leap
 
 print(is_leap(1800))
+
+
+#sub string efficient 
+s='BAANANAS'
+def minion_game(s):
+  vowelPlayer=0;
+  consPlayer=0;
+  for i in range(len(s)):
+    if s[i] in "AEIOU":
+        vowelPlayer += (len(s)-i)
+    else:
+        consPlayer += (len(s)-i)
+  
+  if(vowelPlayer > consPlayer):
+    print('Kevin',vowelPlayer)
+  elif(vowelPlayer == consPlayer):
+    print('Draw')
+  else:
+    print('Stuart',consPlayer)
+    
+  
+
+minion_game(s)
+
+  
